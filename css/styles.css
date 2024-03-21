@@ -1,15 +1,46 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #ffffff;
 }
 
 .container {
+  background-color: #ffffff;
+  margin-top: 50px;
+  padding: 100px;
+  padding-top: 100px;
   text-align: center;
+  width: 100%;
+}
+.area {
+  margin-bottom: 20px; /* Margin bawah untuk memberikan ruang antara elemen */
+}
+
+input[type="date"] {
+  padding: 8px; /* Padding di sekitar input */
+  border: 1px solid #ccc; /* Garis batas dengan warna abu-abu */
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+/* Styling untuk tombol */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efek hover */
+button:hover {
+  background-color: #0056b3; /* Warna latar belakang saat dihover */
 }
 
 input,
@@ -24,24 +55,66 @@ button {
   gap: 20px;
 }
 
+/* Styling untuk card */
 .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 300px;
-  background-color: #f9f9f9;
+  width: 300px; /* Tentukan lebar card */
+  height: 200px; /* Tentukan tinggi card */
+  border: 1px solid #ccc; /* Garis batas dengan warna abu-abu */
+  border-radius: 5px; /* Sudut melengkung */
+  margin-bottom: 20px; /* Margin bawah untuk memberikan ruang antara card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
-.content {
-  text-align: left;
+/* Styling untuk konten di dalam card */
+.card .content {
+  padding: 20px; /* Padding di sekitar konten */
 }
 
-h2 {
-  color: #333;
+/* Styling untuk judul di dalam card */
+.card h2 {
+  margin-bottom: 10px; /* Margin bawah untuk memberikan ruang antara judul dan paragraf */
 }
 
-p {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: #666;
+/* Styling untuk isi paragraf di dalam card */
+.card p {
+  margin: 0; /* Hilangkan margin default */
+}
+
+/* Gaya untuk gelombang */
+#wave {
+  position: fixed; /* Tetapkan posisi elemen */
+  bottom: 0; /* Letakkan di bagian bawah halaman */
+  left: 0; /* Letakkan di sisi kiri halaman */
+  width: 100%; /* Lebar elemen mengambil lebar penuh */
+  z-index: 1; /* Atur z-index agar gelombang berada di belakang konten */
+}
+/* Untuk layar dengan lebar maksimum 768px */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 20px; /* Tambahkan padding untuk memberikan ruang antara elemen */
+  }
+
+  .area {
+    flex-direction: column; /* Tampilkan elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+  }
+
+  .area input[type="date"] {
+    margin-bottom: 10px; /* Berikan jarak antara input dan tombol */
+  }
+
+  .cards {
+    display: grid; /* Tampilkan kartu dalam grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Atur jumlah kolom dan lebar minimum maksimum */
+    gap: 20px; /* Tambahkan jarak antara kartu */
+  }
+
+  .card {
+    width: 100%; /* Kartu mengambil lebar penuh */
+    max-width: 300px; /* Atur lebar maksimum kartu */
+  }
+  h1 {
+    display: block; /* Tampilkan elemen h1 */
+    padding-top: 100px;
+  }
 }

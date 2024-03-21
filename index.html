@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Days</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Count Days</h1>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" />
+      <button onclick="countDays()">Count</button>
+      <div class="cards">
+        <div class="card" id="totalDays">
+          <div class="content">
+            <h2>Berapa Hari Sejak</h2>
+            <p id="totalDaysResult">0</p>
+          </div>
+        </div>
+        <div class="card" id="totalWeeks">
+          <div class="content">
+            <h2>Total Weeks</h2>
+            <p id="totalWeeksResult">0</p>
+          </div>
+        </div>
+        <div class="card" id="totalMonths">
+          <div class="content">
+            <h2>Total Months</h2>
+            <p id="totalMonthsResult">0</p>
+          </div>
+        </div>
+        <div class="card" id="remainingDays">
+          <div class="content">
+            <h2>Remaining Days</h2>
+            <p id="remainingDaysResult">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -17,15 +17,18 @@ function countDays() {
   // Calculate remaining days
   const remainingDays = daysDifference % 7;
 
+  // Array of month names
+  const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
   // Update total days result
   document.getElementById("totalDaysResult").textContent = daysDifference;
-  document.getElementById("totalDays").querySelector("h2").textContent = `Berapa Hari Sejak  ${startDate.getDate()}/${startDate.getMonth() + 1}/${startDate.getFullYear()}`;
+  document.getElementById("totalDays").querySelector("h2").textContent = `Berapa Hari Sejak  ${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
+
   // Update total months result
   document.getElementById("totalMonthsResult").textContent = totalMonths;
+  document.getElementById("totalMonths").querySelector("h2").textContent = `Berapa Bulan Sejak  ${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
 
   // Update total weeks result
   document.getElementById("totalWeeksResult").textContent = totalWeeks;
-
-  // Update remaining days result
-  document.getElementById("remainingDaysResult").textContent = remainingDays;
+  document.getElementById("totalWeeks").querySelector("h2").textContent = `Berapa Minggu Sejak  ${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${startDate.getFullYear()}`;
 }
